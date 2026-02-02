@@ -18,14 +18,6 @@ test('@smoke login with valid agent credentials', async ({ page }) => {
   await dashboard.waitForDashboard();
 });
 
-
-// test('@smoke login with invalid agent credentials', async ({ page }) => {
-//   const login = new LoginPage(page);
-//   await login.goto();
-//   await login.login('agent', 'agent12');
-//   await login.assertErrorVisible();
-// });
-
 test('@smoke verify logout successfully', async ({ page }) => {
   const login = new LoginPage(page);
   await login.login('admin', 'admin123');
