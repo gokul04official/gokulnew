@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://www.valsoftcorp.com",
+      "localStorage": [
+        {
+          "name": "elementor",
+          "value": "{\"__expiration\":{},\"pageViews\":1,\"sessions\":1}"
+        }
+      ]
+    }
+  ]
+}

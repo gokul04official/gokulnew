@@ -12,35 +12,31 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  globalSetup:'./global-setup.ts',
   testDir: './tests',
-  testMatch: ['**/*.spec.ts'],
-  timeout: 40000,
+  testMatch: '**/*.spec.ts',
+  timeout: 30 * 1000,
   expect: {
-    timeout: 4000,
+    timeout: 5000,
   },
   fullyParallel: true,
-
   forbidOnly: !!process.env.CI,
-  retries:1,
+  retries: process.env.CI ? 2 : 0,
   workers:1,
   reporter: 'html',
   use: {
+    headless: false,
+    storageState:'./Playwright/.auth/auth.json',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-
-    screenshot: 'only-on-failure',
-    trace: 'on-first-retry',
-    browserName: 'chromium',
-    headless: true,
-    channel: 'chrome',
-
+    trace: 'retain-on-failure',
   },
 
+  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      
     },
 
     // {

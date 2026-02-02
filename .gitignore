@@ -6,4 +6,16 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/playwright/Screenshots/
+/test-results/
+/screenshots/
+/videos/
+/traces/
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
 tests/example.spec.ts
+
