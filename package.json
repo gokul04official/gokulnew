@@ -9,5 +9,14 @@
   "devDependencies": {
     "@playwright/test": "^1.58.1",
     "@types/node": "^25.2.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright": "^1.58.1",
+    "playwright-core": "^1.58.1",
+    "undici-types": "^7.16.0"
+  },
+  "keywords": []
 }
