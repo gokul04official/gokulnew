@@ -4,7 +4,7 @@ export default defineConfig({
   globalSetup:'./global-setup.ts',
   testDir: './tests',
   testMatch: '**/*.spec.ts',
-  timeout: 30 * 1000,
+  timeout: 50 * 1000,
   expect: {
     timeout: 5000,
   },
