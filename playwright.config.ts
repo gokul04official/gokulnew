@@ -29,6 +29,8 @@ export default defineConfig({
     storageState:'./Playwright/.auth/auth.json',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
     trace: 'retain-on-failure',
   },
 
