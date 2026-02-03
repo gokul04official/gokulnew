@@ -14,7 +14,7 @@ export default defineConfig({
   workers:1,
   reporter: 'html',
   use: {
-    headless: false,
+    headless: true,
     storageState:'./Playwright/.auth/auth.json',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
